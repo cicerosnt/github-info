@@ -1,7 +1,5 @@
 # Consumindo a api do GitHub com PHP com auxilio do Composer: Lista repositório e seguidores.
 
-[Demo](https://hsnaydd.github.io/moveTo/demo/)
-
 ## Testar
 
 ### Altere a  variável “$user” dentro de dentro do arquivo header.php
