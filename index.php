@@ -8,17 +8,18 @@
     
     <?php
       $url = (isset($_GET['url'])) ? strip_tags(addslashes($_GET['url'])) : '';
-      $parametros = explode('/', $url);
+      $params = explode('/', $url);
+      $ispage = $params[0];
       
-      $paginas = array('repositories','followers','all','exit');
+      $pages = array('repositories','followers','all','exit');
 
-      if(isset($arquivo) && $arquivo == ''){
+      if(isset($ispage) && $ispage == ''){
         include "repositories.php";
-      }elseif(isset($arquivo) && $arquivo == 'all'){
+      }elseif(isset($ispage) && $ispage == 'all'){
         include "repositories.php";
         include "followers.php";
-      }elseif(isset($arquivo) && in_array($arquivo, $paginas)){
-        include "$arquivo".'.php';
+      }elseif(isset($ispage) && in_array($ispage, $pages)){
+        include "$ispage".'.php';
       }else{
         include "error.php";
       }

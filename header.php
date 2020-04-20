@@ -5,13 +5,13 @@
 
 	$client = new Client(); 
 
-	$conta = 'cicerosnt'; //user github
+	$user = 'cicerosnt'; //user github
 
-	$repositories = $client->api('user')->repositories($conta); 	
+	$repositories = $client->api('user')->repositories($user); 	
 
-	$followers = $client->api('user')->followers($conta); 
+	$followers = $client->api('user')->followers($user); 
 
-	$show = $client->api('user')->show($conta);
+	$show = $client->api('user')->show($user);
 	
 ?>
 <!DOCTYPE html>
